@@ -46,14 +46,23 @@
 # Support format
 
 ```
-	ANSIC       ex. "Mon Jan 2 15:04:05 2006"
-	UnixDate    ex. "Mon Jan 2 15:04:05 MST 2006"
-	RubyDate    ex. "Mon Jan 02 15:04:05 -0700 2006"
-	RFC822      ex. "02 Jan 06 15:04 MST"
-	RFC822Z     ex. "02 Jan 06 15:04 -0700"
-	RFC850      ex. "Monday, 02-Jan-06 15:04:05 MST"
-	RFC1123     ex. "Mon, 02 Jan 2006 15:04:05 MST"
-	RFC1123Z    ex. "Mon, 02 Jan 2006 15:04:05 -0700"
-	RFC3339Nano ex. "2006-01-02T15:04:05.999999999Z07:00"
-	RFC3339     ex. "2006-01-02T15:04:05Z07:00"
+##### to unix seconds
+
+ANSIC       ex. "Mon Jan 2 15:04:05 2006"
+UnixDate    ex. "Mon Jan 2 15:04:05 MST 2006"
+RubyDate    ex. "Mon Jan 02 15:04:05 -0700 2006"
+RFC822      ex. "02 Jan 06 15:04 MST"
+RFC822Z     ex. "02 Jan 06 15:04 -0700"
+RFC850      ex. "Monday, 02-Jan-06 15:04:05 MST"
+RFC1123     ex. "Mon, 02 Jan 2006 15:04:05 MST"
+RFC1123Z    ex. "Mon, 02 Jan 2006 15:04:05 -0700"
+RFC3339Nano ex. "2006-01-02T15:04:05.999999999Z07:00"
+RFC3339     ex. "2006-01-02T15:04:05Z07:00"
+
+
+##### to rfc3339
+Unix Seconds ex. 1551942377
+Unix Millis  ex. 1551942377000
+Unix Micros  ex. 1551942377000000
+Unix Nanos   ex. 1551942377000000000
 ```
