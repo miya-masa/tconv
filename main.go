@@ -25,14 +25,17 @@ func main() {
 		return
 	}
 
-	str := fs.Arg(1)
-	if str == "" {
+	args := fs.Args()
+	var str string
+	if len(args) == 1 {
 		bs, err := ioutil.ReadAll(os.Stdin)
 		if err != nil {
 			log.Fatal(err)
 			return
 		}
 		str = strings.TrimSpace(string(bs))
+	} else {
+		str = strings.Join(args[1:], " ")
 	}
 
 	val, err := tmconv(str)
@@ -61,11 +64,6 @@ var timeFormats = []string{
 	time.RFC1123,
 	time.RFC3339Nano,
 	time.RFC3339,
-	time.Kitchen,
-	time.Stamp,
-	time.StampMilli,
-	time.StampMicro,
-	time.StampNano,
 }
 
 func tmconv(str string) (interface{}, error) {
