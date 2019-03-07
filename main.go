@@ -19,7 +19,7 @@ var (
 )
 
 func main() {
-	fs := flag.NewFlagSet("tconv", flag.ExitOnError)
+	fs := flag.NewFlagSet("tmconv", flag.ExitOnError)
 	if err := fs.Parse(os.Args); err != nil {
 		log.Fatal(err)
 		return
@@ -35,7 +35,7 @@ func main() {
 		str = strings.TrimSpace(string(bs))
 	}
 
-	val, err := tconv(str)
+	val, err := tmconv(str)
 	if err != nil {
 		log.Fatal(err)
 		return
@@ -68,7 +68,7 @@ var timeFormats = []string{
 	time.StampNano,
 }
 
-func tconv(str string) (interface{}, error) {
+func tmconv(str string) (interface{}, error) {
 	if regUnixTime.MatchString(str) {
 		return unixToTimeSet(regUnixTime.FindStringSubmatch(str))
 	}
